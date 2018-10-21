@@ -4,5 +4,5 @@ xcode_scheme:
     - LoopKit
     - LoopKitUI
 script:
-   - xcodebuild -project LoopKit.xcodeproj -scheme LoopKit build -destination 'name=iPhone SE' test
-   - xcodebuild -project LoopKit.xcodeproj -scheme "LoopKit Example" build -destination 'name=iPhone SE'
+   - xcodebuild -project LoopKit.xcodeproj -scheme LoopKit build -destination 'name=iPhone XS' test
+   - xcodebuild -project LoopKit.xcodeproj -scheme "LoopKit Example" build -destination 'name=iPhone XS'
