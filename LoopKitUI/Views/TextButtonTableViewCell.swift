@@ -9,7 +9,7 @@ import UIKit
 
 open class TextButtonTableViewCell: LoadingTableViewCell {
 
-    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
 
         textLabel?.tintAdjustmentMode = .automatic
