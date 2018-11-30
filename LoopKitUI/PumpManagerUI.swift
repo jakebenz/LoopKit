@@ -10,6 +10,7 @@ import LoopKit
 
 public enum HUDTapAction {
     case showViewController(_ viewController: UIViewController)
+    case presentViewController(_ viewController: UIViewController)
     case openAppURL(_ appURL: URL)
 }
 
@@ -32,6 +33,8 @@ public protocol HUDProvider {
     
     // The current, serializable state of the HUD views
     var hudViewsRawState: HUDViewsRawState { get }
+    
+    func hudDidAppear()
 }
 
 public protocol PumpManagerUI: PumpManager, DeliveryLimitSettingsTableViewControllerSyncSource, SingleValueScheduleTableViewControllerSyncSource {
@@ -51,7 +54,7 @@ public protocol PumpManagerUI: PumpManager, DeliveryLimitSettingsTableViewContro
 }
 
 
-public protocol PumpManagerSetupViewController {
+public protocol PumpManagerSetupViewController: SetupNavigationController {
     var setupDelegate: PumpManagerSetupViewControllerDelegate? { get set }
 
     var maxBasalRateUnitsPerHour: Double? { get set }
